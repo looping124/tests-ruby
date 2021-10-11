@@ -21,15 +21,7 @@ def first_word(setence)
 end
 
 def titleize(sentence)
-  #sentence.split(' ').map!{|word| word.capitalize if word.length > 3}.join(' ')
-  array = sentence.split(' ')
-  array.length.times do |n|
-    if array[n].length>3 || n ==0
-      array[n]=array[n].capitalize
-    else 
-    end
-  end
-  return array.join(' ')
-end
+  
+  sentence.split.each_with_index.map{|word,i| i==0? word.capitalize : word.length > 3 ? word.capitalize : word}.join(" ")
 
-print  titleize("ca ca va fgzebojnjgzuboe")
+end
