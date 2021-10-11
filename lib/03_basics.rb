@@ -11,3 +11,18 @@ def who_is_bigger(a,b,c)
     end
   end
 end
+
+def reverse_upcase_noLTA(nolta)
+ nolta.reverse.upcase.delete('LTA')
+end
+
+def array_42(array)
+  array.include?(42)
+end
+
+def magic_array(ar)
+  ar.flatten.sort.uniq.map{|n|n*2}.delete_if{|n|n%3==0}
+  
+end
+
+ 
